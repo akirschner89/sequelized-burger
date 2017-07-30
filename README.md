@@ -1,2 +1,2 @@
-# sequelized-burger
-Full Stack burger app using sequelized/MySQL/Node/Express for the back-end
+# eat-burger
+ORM + MVC app for selecting burgers - also node.js, express.js, handlebars

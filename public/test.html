@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/burger_style.css" type="text/css">
+    <title>Eat My BURGERS!</title>
+</head>
+
+<body>
+    <img src="./assets/img/burger_image.jpg" alt="big juicy burger">
+    <h1>EAT-DA-BURGER!</h1>
+    <ul>
+<!--         {{#each burgers}} {{#unless this.devoured}} -->
+        <li>
+            <!-- {{this.burger_name}} -->
+            <div class="burger-container">
+            <p>One burger we need to eat</p>
+            </div>
+<!--             <form action="/{{this.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="devoured" value="true"> -->
+                <div class="devour-container">
+                <button type="submit">DEVOUR!</button>
+                </div>
+            </form>
+        </li>
+<!--         {{/unless}} {{/each}} -->
+    </ul>
+
+<div id="burger-wrapper">
+    <ul>
+<!--         {{#each burgers}} {{#if this.devoured}} -->
+        <div class="consumed-container">
+        <li>one consumed burger</li>
+        </div>
+<!--         {{/if}} {{/each}} -->
+		<div class="consumed-container">
+		<li>another consumed burger</li>
+		</div>
+    </ul>
+</div>
+
+    <form class="create-update-form" action="/" method="POST">
+        <div class="form-group">
+            <input type="textarea" id="ca" name="name">
+        </div>
+        <button type="submit">Add Burger</button>
+        <h3>Create the Burger of your Fansties</h3>
+    </form>
+</body>
+
+</html>
