@@ -18,7 +18,7 @@
   "production": {
     "username": "root",
     "password": "root",
-    "database": "database_production",
+    "database": "burgers_db",
     "host": "localhost",
     "port": "8889",
     "dialect": "mysql"

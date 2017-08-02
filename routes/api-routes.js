@@ -25,16 +25,16 @@ module.exports = function(app) {
   });
 
   // Get rotue for retrieving a single burgers
-  // app.get("/api/burgers/:id", function(req, res) {
-  //   db.burgers.findOne({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   })
-  //   .then(function(dbburgers) {
-  //     res.json(dbburgers);
-  //   });
-  // });
+  app.get("/api/burgers/:id", function(req, res) {
+    db.burgers.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+    .then(function(dbburgers) {
+      res.json(dbburgers);
+    });
+  });
 
   // burgers route for saving a new burgers
   app.post("/api/burgers", function(req, res) {
@@ -60,15 +60,15 @@ module.exports = function(app) {
   // });
 
   // PUT route for updating burgers
-  // app.put("/api/burgers", function(req, res) {
-  //   db.burgers.update(req.body,
-  //     {
-  //       where: {
-  //         id: req.body.id
-  //       }
-  //     })
-  //   .then(function(dbburgers) {
-  //     res.json(dbburgers);
-  //   });
-  // });
+  app.put("/api/burgers", function(req, res) {
+    db.burgers.update(req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+      })
+    .then(function(dbburgers) {
+      res.json(dbburgers);
+    });
+  });
 };

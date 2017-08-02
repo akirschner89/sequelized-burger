@@ -19,7 +19,11 @@ app.use(methodOverride("_method"));
 
 
 // Override with POST having ?_method=DELETE
-// app.use(methodOverride("_method"));
+app.use(methodOverride("_method"));
+
+// Import routes and give the server access to them.
+// var routes = require("./controllers/burgers_controller.js");
+// app.use("/", routes);
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
@@ -28,14 +32,14 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-// var routes = require("./controllers/burgers_controller.js");
+var routes = require("./controllers/burgers_controller.js");
+app.use("/", routes);
 
-// app.use("/", routes);
 require("./routes/api-routes.js")(app);
-require("./routes/html-routes.js")(app);
+// require("./routes/html-routes.js")(app);
 
 
-db.sequelize.sync({}).then(function() {
+db.sequelize.sync({force:true}).then(function() {
   app.listen(port, function() {
     console.log("App listening on PORT " + port);
   });

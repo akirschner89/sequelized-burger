@@ -1,18 +1,17 @@
-module.exports = function(sequelize, Datatypes) {
+module.exports = function(sequelize, DataTypes) {
   var burgers = sequelize.define("burgers", {
       burger_name: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
       devoured: {
-        type: Datatypes.BOOLEAN,
+        type: DataTypes.BOOLEAN,
         defaultValue: false
       }
-  // burger_name: DataTypes.STRING,
-  // devoured: DataTypes.BOOLEAN
+        // timestamps: false
   });
   return burgers;
 };
