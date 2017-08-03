@@ -21,9 +21,6 @@ app.use(methodOverride("_method"));
 // Override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));
 
-// Import routes and give the server access to them.
-// var routes = require("./controllers/burgers_controller.js");
-// app.use("/", routes);
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
