@@ -20,7 +20,7 @@
     // "dialect": "mysql"
      "username": "xh0m0uiow1bdc989",
     "password": "qocpxbixya3tmv5t",
-    // "database": "burgers_db",
+    "database": "siv5br474ys17b17",
     "host": "dyud5fa2qycz1o3v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "port": "3306",
     "dialect": "mysql"
