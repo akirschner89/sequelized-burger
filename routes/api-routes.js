@@ -47,17 +47,6 @@ module.exports = function(app) {
     });
   });
 
-  // DELETE route for deleting burgers
-  // app.delete("/api/burgers/:id", function(req, res) {
-  //   db.burgers.destroy({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   })
-  //   .then(function(dbburgers) {
-  //     res.json(dbburgers);
-  //   });
-  // });
 
   // PUT route for updating burgers
   app.put("/api/burgers", function(req, res) {

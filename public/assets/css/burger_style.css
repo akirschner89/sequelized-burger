@@ -56,6 +56,11 @@ button {
 }
 
 /*custom*/
+.wrapper {
+	height: 60%;
+	margin-bottom: 10%;
+}
+
 .burger-container {
 	background-color: white;
 	font-family: courier;
@@ -68,6 +73,10 @@ button {
 	margin-top: 5px;
 }
 
+.burger-container > li {
+	list-style: none;
+}
+
 .devour-container > form {
 	padding-bottom: -50px;
 }
@@ -77,11 +86,16 @@ button {
     font-family: times;
     color: #474243;
     max-width: 30%;
+    max-height: 50%;
     border: 1px solid #474243;
     position: relative;
     left: 60%;
-    bottom: 250px;
+    bottom: 70%;
     list-style: none;
+}
+
+.dev-button {
+	display: inline-flex;
 }
 
 #newBurger-submit {
